@@ -1,0 +1,25 @@
+{
+  "name": "cordova-plugin-qrcodejs",
+  "version": "0.0.1",
+  "description": "Cordova plugin for generating QR code",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MenelicSoftware/cordova-plugin-qrcodejs.git"
+  },
+  "keywords": [
+    "QRCodeJS",
+    "plugin",
+    "qr",
+    "qr code"
+  ],
+  "author": "Menelic Ltd",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/MenelicSoftware/cordova-plugin-qrcodejs/issues"
+  },
+  "homepage": "https://github.com/MenelicSoftware/cordova-plugin-qrcodejs"
+}

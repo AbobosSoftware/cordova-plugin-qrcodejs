@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin 
+    xmlns="http://www.phonegap.com/ns/plugins/1.0" 
+    xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-qrcodejs" version="0.0.1">
+    <name>cordova-plugin-qrcodejs</name>
+    <description>Cordova plugin for generating QR Code based on QRCodejs</description>
+    <repo>https://github.com/MenelicSoftware/cordova-plugin-qrcodejs.git</repo>
+    <keywords>QRCodejs, QRCode, Cordova, QR code generator</keywords>
+    <license></license>
+    <author>Arcadius Ahouansou, Menelic Ltd</author>
+    <engines>
+        <engine name="cordova" version=">=3.0.0"/>
+    </engines>
+    <!-- The main plugin interface -->
+    <js-module src="www/qrcodejsPlugin.js" name="QRCodeJS">
+        <clobbers target="cordova.plugins.qrcodejs"/>
+    </js-module>
+    <!-- core libary doing the QR encoding-->
+    <js-module src="www/qrcode.js" name="QRCcodeJSImpl">
+        <runs/>
+    </js-module>
+    <!--The proxy that call the core library-->
+    <js-module src="www/qrcodejsPluginProxy.js" name="QRCcodeJSProxy">
+        <runs/>
+    </js-module>
+</plugin>
