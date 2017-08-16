@@ -32,9 +32,10 @@ Then at the top of your  Typescript code:
 
 ```javascript
 cordova.plugins.qrcodejs.encode('TEXT_TYPE', 'myemail@mydomain.me', (base64EncodedQRImage) => {
-      console.info('=========QRCodeJS response is ' + base64EncodedQRImage);
+      console.info('QRCodeJS response is ' + base64EncodedQRImage);
+      //TODO: use your base64EncodedQRImage
     }, (err) => {
-      console.error('=========QRCodeJS error is ' + JSON.stringify(err));
+      console.error('QRCodeJS error is ' + JSON.stringify(err));
     });
 
 ```
@@ -51,9 +52,10 @@ let options = {
 };
 
 cordova.plugins.qrcodejs.encode('TEXT_TYPE', 'myemail@mydomain.me', (base64EncodedQRImage) => {
-	console.info('=========QRCodeJS response is ' + base64EncodedQRImage);
+	console.info('QRCodeJS response is ' + base64EncodedQRImage);
+  //TODO: use your base64EncodedQRImage
 }, (err) => {
-	console.error('=========QRCodeJS error is ' + JSON.stringify(err));
+	console.error('QRCodeJS error is ' + JSON.stringify(err));
 }, options);
 
 ```
