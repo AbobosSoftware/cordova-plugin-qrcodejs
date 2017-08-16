@@ -18,12 +18,12 @@ It's a pure JavaScript implementation that can run an just any platform.
 # How to use it
 
 ```bash
-ionic plugin add https://github.com/MenelicSoftware/cordova-plugin-qrcodejs.git
+ionic plugin add https://github.com/MenelicSoftware/cordova-plugin-qrcodejs
 ```
 or
 
 ```bash
-cordova plugin add https://github.com/MenelicSoftware/cordova-plugin-qrcodejs.git
+cordova plugin add https://github.com/MenelicSoftware/cordova-plugin-qrcodejs
 ```
 
 Then at the top of your  Typescript code:
