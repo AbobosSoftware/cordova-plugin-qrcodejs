@@ -27,7 +27,10 @@ cordova plugin add cordova-plugin-qrcodejs
 ```
 
 Then at the top of your  Typescript code:
-```declare var cordova: any
+
+```javascript
+declare var cordova: any
+
 ```
 
 ```javascript
