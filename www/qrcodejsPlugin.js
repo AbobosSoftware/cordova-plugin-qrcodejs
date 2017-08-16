@@ -6,9 +6,6 @@
  * Copyright (c) 2011, IBM Corporation
  */
 
-
-var exec = require("cordova/exec");
-
 var _qrProxy = require('cordova-plugin-qrcodejs.QRCcodeJSProxy');
 
 /**
@@ -78,13 +75,7 @@ QRCodeJS.prototype.encode = function (type, data, successCallback, errorCallback
         return;
     }
 
-    /**
-    // Using exec for browser platform works, I have not yet figured out how to use it for jalling JavaScript on android, windows, ios ...
-    exec(successCallback, errorCallback, 'QRCodeJS', 'encode', [
-        {"type": type, "data": data, "options": options}
-    ]);
-    */
-    
+    // equivalent to cordova.exec
     _qrProxy.encode(successCallback, errorCallback, [{
         "type": type,
         "data": data,

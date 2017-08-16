@@ -39,6 +39,12 @@ cordova.plugins.qrcodejs.encode('TEXT_TYPE', 'data to encode', (base64EncodedQRI
 
 ```
 
+# Tested on
+* Browser
+* Android
+* ? (please, let me know if it works for you on other platforms)
+
+
 # Credits
 It is based on the great work done by the Blackberry team at
 https://github.com/blackberry/phonegap-plugin-barcodescanner/
@@ -49,5 +55,5 @@ wich is based on work done by https://github.com/jeromeetienne/jquery-qrcode
 
 * Apache-2
 
-* Copiright Menelic Ltd
+* Copiright Menelic Limited.
 
