@@ -31,13 +31,32 @@ Then at the top of your  Typescript code:
 ```
 
 ```javascript
-cordova.plugins.qrcodejs.encode('TEXT_TYPE', 'data to encode', (base64EncodedQRImage) => {
-      console.info('=========QRCodeJS response is ' + base64EncodedQRImage)
+cordova.plugins.qrcodejs.encode('TEXT_TYPE', 'myemail@mydomain.me', (base64EncodedQRImage) => {
+      console.info('=========QRCodeJS response is ' + base64EncodedQRImage);
     }, (err) => {
-      console.error('=========QRCodeJS error is ' + JSON.stringify(err))
-    })
+      console.error('=========QRCodeJS error is ' + JSON.stringify(err));
+    });
 
 ```
+
+Or with more options
+
+```javascript
+let options = {
+				width: 256,
+				height: 256,
+				colorDark: "#000000",
+				colorLight: "#ffffff",
+			};
+
+cordova.plugins.qrcodejs.encode('TEXT_TYPE', 'myemail@mydomain.me', (base64EncodedQRImage) => {
+      console.info('=========QRCodeJS response is ' + base64EncodedQRImage);
+    }, (err) => {
+      console.error('=========QRCodeJS error is ' + JSON.stringify(err));
+    }, options);
+```
+
+
 
 # Tested on
 * Browser

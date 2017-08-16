@@ -38,41 +38,57 @@ module.exports = {
 			return errorCallback('argiments are required ')
 		}
 
-		var data = args[0]['data'];
+		var textToEncode = args[0]['data'];
 		var type = args[0]['type'];
 		var options = args[0]['options'];
 
-		if (data == "" || data == undefined) {
+		if (!textToEncode) {
 			errorCallback("Data to be encoded was not specified");
 			return;
 		}
 
-		if (type == "" || type == undefined) {
+		if (!type) {
 			type = TEXT_TYPE;
 		}
 
 		if (!options) {
-			options = {
-				text: data,
-				width: 256,
-				height: 256,
-				colorDark: "#000000",
-				colorLight: "#ffffff",
-			};
+			options = {}
 		}
 
-		console.debug("Type: " + type + " Data: " + data);
+		//Always set the data
+		options.text = textToEncode;
+
+		// set default width
+		if (!options.width) {
+			options.width = 256;
+		}
+
+		//set default height
+		if (!options.height) {
+			options.height = 256;
+		}
+
+		//set default color
+		if (!options.colorDark) {
+			options.colorDark = "#000000";
+		}
+
+		//set default color
+		if (!options.colorLight) {
+			options.colorLight = "#ffffff";
+		}
+
+		console.debug("Type: " + type + " Options: " + JSON.stringify(options));
 
 		//Make QRcode using qrcode.js
 		var bdiv = document.createElement('div');
-
 
 		var imageURI = _qr.makeQRcode(bdiv, options);
 
 		try {
 			successCallback(imageURI);
 		} catch (e) {
-			errorCallback("Failed to encode barcode");
+			errorCallback("Failed to encode QR code");
 		}
 	}
 };
