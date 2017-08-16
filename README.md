@@ -42,18 +42,20 @@ cordova.plugins.qrcodejs.encode('TEXT_TYPE', 'myemail@mydomain.me', (base64Encod
 Or with more options
 
 ```javascript
+
 let options = {
-				width: 256,
-				height: 256,
-				colorDark: "#000000",
-				colorLight: "#ffffff",
-			};
+	width: 256,
+	height: 256,
+	colorDark: "#000000",
+	colorLight: "#ffffff",
+};
 
 cordova.plugins.qrcodejs.encode('TEXT_TYPE', 'myemail@mydomain.me', (base64EncodedQRImage) => {
-      console.info('=========QRCodeJS response is ' + base64EncodedQRImage);
-    }, (err) => {
-      console.error('=========QRCodeJS error is ' + JSON.stringify(err));
-    }, options);
+	console.info('=========QRCodeJS response is ' + base64EncodedQRImage);
+}, (err) => {
+	console.error('=========QRCodeJS error is ' + JSON.stringify(err));
+}, options);
+
 ```
 
 
