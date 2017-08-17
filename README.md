@@ -70,6 +70,19 @@ cordova.plugins.qrcodejs.encode('TEXT_TYPE', 'myemail@mydomain.me', (base64Encod
 * Android
 * ? (please, let me know if it works for you on other platforms)
 
+# Why
+Initially, I had a look at the official cordova plugin [phonegap-plugin-barcodescanner](https://github.com/phonegap/phonegap-plugin-barcodescanner)
+
+As far as QR code encoding is concerned, it does not work as expected.
+* On Android for instance, there is no way of getting hold of the generated image
+* Windows is ont supported
+
+And as there is nothing native about transforming a string into a QR image, I started digging around and landed on the Blackberry implementation which uses pure JavaScript.
+
+The interface of this plugin is intentionally left identical to the one of the official [phonegap-plugin-barcodescanner](https://github.com/phonegap/phonegap-plugin-barcodescanner)
+
+Hopefully, this plugin will get merged into the official phonegap-plugin-barcodescanner.
+
 
 # Credits
 It is based on the great work done by the Blackberry team at
@@ -81,5 +94,5 @@ wich is based on work done by https://github.com/jeromeetienne/jquery-qrcode
 
 * Apache-2
 
-* Copiright Menelic Limited.
+* &copy; Copiright 2017, Menelic Limited.
 
