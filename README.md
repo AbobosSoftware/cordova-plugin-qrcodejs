@@ -75,7 +75,7 @@ Initially, I had a look at the official cordova plugin [phonegap-plugin-barcodes
 
 As far as QR code encoding is concerned, it does not work as expected.
 * On Android for instance, there is no way of getting hold of the generated image
-* Windows is ont supported
+* Windows is not supported
 
 And as there is nothing native about transforming a string into a QR image, I started digging around and landed on the Blackberry implementation which uses pure JavaScript.
 
