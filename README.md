@@ -70,7 +70,7 @@ cordova.plugins.qrcodejs.encode('TEXT_TYPE', 'myemail@mydomain.me', (base64Encod
 * Android
 * ? (please, let me know if it works for you on other platforms)
 
-# Why
+# The Why
 Initially, I had a look at the official cordova plugin [phonegap-plugin-barcodescanner](https://github.com/phonegap/phonegap-plugin-barcodescanner)
 
 As far as QR code encoding is concerned, it does not work as expected.
